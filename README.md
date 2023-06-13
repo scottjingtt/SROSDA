@@ -1,5 +1,7 @@
 # SROSDA (ICCV 2021)
-implementation of the ICCV work "SR-OSDA". 
+implementation of the ICCV work **Towards Novel Target Discovery Through Open-Set Domain Adaptation** [[Paper](https://openaccess.thecvf.com/content/ICCV2021/papers/Jing_Towards_Novel_Target_Discovery_Through_Open-Set_Domain_Adaptation_ICCV_2021_paper.pdf)].
+
+:zap: ***Please check the extension journal work "Interpretable Novel Target Discovery Through Open-Set Domain Adaptation" ([XSR-OSDA](https://github.com/scottjingtt/XSROSDA)).***
 
 ## Data Preparation
 ---
