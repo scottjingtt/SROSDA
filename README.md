@@ -1,16 +1,22 @@
 # SROSDA (ICCV 2021)
 implementation of the ICCV work "SR-OSDA". 
 
-## Data
+## Data Preparation
 ---
-- [I2AwA](./data/I2AwA/dataset_info.txt)
-- [N2AwA](./data/N2AwA/classes.txt)
+- [N2AwA](./data/N2AwA/classes.txt): DomainNet & AwA2
+- [I2AwA](./data/I2AwA/dataset_info.txt): 3D2 & AwA2
 
-To extract pre-trained ResNet-50 features, check script:
+(1) To extract pre-trained ResNet-50 features, check script:
 
 ```shell
 ./data/N2AwA/features/extract_resnet_features.ipynb
 ```
+(2) Collect attributes for all samples based on their labels, check script:
+
+```shell
+./data/N2AwA/attributes/check_N2AwA_data.ipynb
+```
+
 ## Dependencies
 ---
 - Python 3.6
@@ -36,11 +42,13 @@ python main.py
 
 - Open-set Domain Adaptation Task
 
-> $OS^*$: 
+> $OS^*$: class-wise average accuracy on the seen categories.
 >
-> $OS^\diamond$: 
+> $OS^\diamond$: class-wise average accuracy on the unseen categories correctly classified as "unknown".
 >
-> $OS$: 
+> $OS$: $\frac{OS^* \times C_{shr} + OS^\diamond}{C_{shr} + 1}$
+
+*$C_{shr}$ is the number of shared categories between the source and target domains.*
 
 - Semantic-Recovery Open-Set Domain Adaptation Task
 
