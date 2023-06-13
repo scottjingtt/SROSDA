@@ -26,9 +26,10 @@ To extract pre-trained ResNet-50 features, check script:
 
 *Note:* Or use our clustering initialization results `./data/N2AwA/` directly.
 
-### Step 2:
-
-### Step 3:
+### Step 2: Train with the initialized clustering and pseudo labels on the extracted features.
+```shell
+python main.py
+```
 
 ## Evaluation
 ---
