@@ -1,12 +1,16 @@
 # SROSDA (ICCV 2021)
 implementation of the ICCV work "SR-OSDA". 
-Code and data will be available soon.
 
 ## Data
 ---
 - [I2AwA](./data/I2AwA/dataset_info.txt)
 - [N2AwA](./data/N2AwA/classes.txt)
 
+To extract pre-trained ResNet-50 features, check script:
+
+```shell
+./data/N2AwA/features/extract_resnet_features.ipynb
+```
 ## Dependencies
 ---
 - Python 3.6
@@ -15,6 +19,16 @@ Code and data will be available soon.
 
 ## Training
 ---
+### Step 1: Initialization clustering on target data (Seen/Unseen Initialization)
+```shell
+./data/N2AwA/refine_cluster-samples.ipynb
+```
+
+*Note:* Or use our clustering initialization results `./data/N2AwA/` directly.
+
+### Step 2:
+
+### Step 3:
 
 ## Evaluation
 ---
